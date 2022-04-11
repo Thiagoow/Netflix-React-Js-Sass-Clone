@@ -1,7 +1,7 @@
 @use "../abstracts/variables" as *;
 
 .button {
-  font-size: calc(10px + 2vmin);
+  font-size: $h2-font-size;
   background: $first-color;
   margin-top: $mg-1-5;
   margin-bottom: $mg-1-5;

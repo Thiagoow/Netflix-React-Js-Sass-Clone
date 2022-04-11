@@ -1,43 +1,12 @@
 @use "../abstracts/variables" as *;
 
-.App {
-  text-align: center;
-  min-height: 100vh;
+.home {
+  font-size: $txt-font-size;
+  color: $txt-color;
+  min-height: 100%;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  background-color: $body-color;
-  color: $txt-color;
-}
-
-.appLogo {
-  height: 30vmin;
-  pointer-events: none;
-
-  @media (prefers-reduced-motion: no-preference) {
-    animation: appLogo-spin infinite 20s linear;
-  }
-}
-
-.links {
-  margin-top: $mg-1-5;
-
-  .appLink {
-    color: $first-color;
-
-    &:hover {
-      color: $alt-color;
-    }
-  }
-}
-
-@keyframes appLogo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
