@@ -1,0 +1,25 @@
+@use "../abstracts/variables" as *;
+
+.home {
+  min-height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .logoBtn {
+    display: flex;
+    align-self: flex-start;
+
+    .logo {
+      max-width: 120px;
+      margin-top: $mg-1-5;
+      margin-left: $mg-1-5;
+    }
+  }
+
+  h1 {
+    padding-top: 8rem;
+  }
+}

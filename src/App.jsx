@@ -1,12 +1,8 @@
 import React from "react";
-import Home from "./pages/Home";
+import { AppRoutes } from "./Routes";
 
-function App() {
-  return (
-    <>
-      <Home />
-    </>
-  );
-}
+const App = () => {
+  return <AppRoutes />;
+};
 
 export default App;
