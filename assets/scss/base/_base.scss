@@ -1,0 +1,39 @@
+@use "../abstracts/variables" as *;
+
+/*========== BASE ==========*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body,
+button,
+input,
+textarea {
+  font-family: $body-font;
+  font-size: $normal-font-size;
+}
+body {
+  background: $body-color;
+  color: $txt-color;
+  transition: 0.4s; /* for dark/light mode animation */
+}
+
+/*========== SCROLL BAR ==========*/
+::-webkit-scrollbar {
+  width: 0.61rem;
+  background-color: $scroll-bar-color;
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $scroll-thumb-color;
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: $scroll-hover-color;
+}

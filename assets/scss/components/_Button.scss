@@ -1,0 +1,12 @@
+@use "../abstracts/variables" as *;
+
+.button {
+  font-size: calc(10px + 2vmin);
+  background: $first-color;
+  margin-top: $mg-1-5;
+  margin-bottom: $mg-1-5;
+
+  &:hover {
+    background: $alt-color;
+  }
+}

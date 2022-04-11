@@ -1,0 +1,29 @@
+@use "../abstracts/variables" as *;
+
+/*========== CSS Reset ==========*/
+h1,
+h2,
+h3 {
+  color: $title-color;
+  font-weight: $wgt-semi-bold;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  //color: $title-color;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
