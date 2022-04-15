@@ -2,7 +2,7 @@ import React from "react";
 import api from "../api";
 import SectionRow from "../components/SectionRow";
 
-export default function Home() {
+const Home = () => {
   const [mediaList, setMediaList] = React.useState([]);
 
   React.useEffect(() => {
@@ -26,4 +26,6 @@ export default function Home() {
       </section>
     </main>
   );
-}
+};
+
+export default Home;
