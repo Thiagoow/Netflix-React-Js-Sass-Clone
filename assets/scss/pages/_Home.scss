@@ -1,0 +1,12 @@
+@use "../abstracts/variables" as *;
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .list {
+    margin-top: $mg-2;
+  }
+}

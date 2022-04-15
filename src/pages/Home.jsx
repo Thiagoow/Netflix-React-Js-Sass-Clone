@@ -17,6 +17,8 @@ export default function Home() {
   }, []);
   return (
     <main className="home">
+      <h1>This is a test</h1>
+
       <section className="list">
         {mediaList.map((item, key) => (
           <SectionRow key={key} title={item.title} items={item.items} />

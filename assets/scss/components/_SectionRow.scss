@@ -1,0 +1,16 @@
+@use "../abstracts/variables" as *;
+
+.movieRow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: $mg-1-5;
+  background-color: $container-color;
+}
+
+.section {
+  display: flex;
+  //Spacing between imgs:
+  margin-bottom: $mg-1;
+  margin-right: $mg-1;
+}
