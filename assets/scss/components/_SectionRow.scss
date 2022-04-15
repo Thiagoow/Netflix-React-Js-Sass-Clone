@@ -8,9 +8,13 @@
   background-color: $container-color;
 }
 
-.section {
+.item {
   display: flex;
   //Spacing between imgs:
   margin-bottom: $mg-1;
   margin-right: $mg-1;
+
+  img {
+    width: 80px;
+  }
 }
