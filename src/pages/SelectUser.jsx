@@ -4,13 +4,13 @@ import logo from "../../assets/img/logo.svg";
 
 export default function SelectUser() {
   return (
-    <div className="home">
+    <main className="main">
       <a href="/" className="logoBtn">
         <img src={logo} alt="Netflix Logo" className="logo" />
       </a>
 
       <h1>Who's watching?</h1>
       <Profiles />
-    </div>
+    </main>
   );
 }
