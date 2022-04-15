@@ -2,7 +2,7 @@ import React from "react";
 import Profiles from "../components/Profiles";
 import logo from "../../assets/img/logo.svg";
 
-export default function Home() {
+export default function SelectUser() {
   return (
     <div className="home">
       <a href="/" className="logoBtn">
