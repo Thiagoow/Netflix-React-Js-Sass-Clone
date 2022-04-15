@@ -5,22 +5,22 @@ const users = [
     name: "Thiago"
   },
   {
-    id: 1,
+    id: 2,
     photo: "/images/profiles/user2.png",
     name: "Lucas"
   },
   {
-    id: 1,
+    id: 3,
     photo: "/images/profiles/user3.png",
     name: "Lulee"
   },
   {
-    id: 1,
+    id: 4,
     photo: "/images/profiles/user4.png",
-    name: "Mih"
+    name: "Mih&Bella"
   },
   {
-    id: 1,
+    id: 5,
     photo: "/images/profiles/user5.png",
     name: "Infantil"
   }
