@@ -8,8 +8,8 @@ export function AppRoutes() {
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<SelectUser />} exact />
-          <Route path="/home" element={<Home />} exact />
+          <Route path="/" element={<SelectUser />} />
+          <Route path="/home" element={<Home />} />
         </Routes>
       </Router>
     </>
