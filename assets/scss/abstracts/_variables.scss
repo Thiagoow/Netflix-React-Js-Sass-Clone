@@ -2,10 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;800&display=swap");
 
 //========== Colors:
-$first-color: #db0000;
+$first-color: #e50914;
 $first-color-lighter: lighten($first-color, 10%);
 $alt-color: darken($first-color, 15%);
-$inactive-color: rgba($first-color, 60%);
+$inactive-color: rgba($first-color, 40%);
 
 $title-color: #fafafa;
 $txt-color: #d7d7db;
@@ -16,9 +16,9 @@ $container-color: #1b1f23;
 $shadow-color: rgba(#fff, 0.2);
 $border-color: #666;
 
-$scroll-bar-color: #262636;
-$scroll-thumb-color: #6f6f9b;
-$scroll-hover-color: #3d3d5c;
+$scroll-bar-color: $container-color;
+$scroll-thumb-color: $first-color;
+$scroll-hover-color: $alt-color;
 
 //========== Font and Typography:
 $body-font: "Inter", sans-serif;
