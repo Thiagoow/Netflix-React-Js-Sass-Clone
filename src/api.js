@@ -12,6 +12,9 @@ const APIfetch = async (endpoint) => {
   }
 };
 
+/* Genres list: 
+https://api.themoviedb.org/3/genre/list?api_key=#&language=pt-br&region=br
+*/
 export default {
   getHomeList: async () => {
     return [
@@ -60,6 +63,13 @@ export default {
         )
       }, 
       */
+      {
+        slug: "history",
+        title: "Inspirados na realidade",
+        items: await APIfetch(
+          `/discover/movie?api_key=${APIkey}&with_networks=213&with_genres=36`
+        )
+      },
       {
         slug: "romance",
         title: "Histórias de amor",
