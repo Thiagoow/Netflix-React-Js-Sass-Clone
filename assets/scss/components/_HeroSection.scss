@@ -1,0 +1,16 @@
+@use "../abstracts/variables" as *;
+
+.heroSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+
+  h2 {
+    color: $first-color;
+  }
+}
+
+.mediaContent {
+  margin-top: $mg-0-25;
+}

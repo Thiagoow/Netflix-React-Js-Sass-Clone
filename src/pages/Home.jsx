@@ -1,5 +1,6 @@
 import React from "react";
 import api from "../api";
+import HeroSection from "../components/HeroSection";
 import SectionRow from "../components/SectionRow";
 
 const Home = () => {
@@ -15,9 +16,10 @@ const Home = () => {
     //Executa a função:
     loadAll();
   }, []);
+
   return (
     <main className="home">
-      <h1>This is a test</h1>
+      <HeroSection />
 
       <section className="list">
         {mediaList.map((item, key) => (
