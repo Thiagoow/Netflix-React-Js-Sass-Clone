@@ -1,20 +1,40 @@
 @use "../abstracts/variables" as *;
 
 .movieRow {
+  .title,
+  .section {
+    margin-left: $mg-2;
+  }
+}
+
+.section {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-top: $mg-1-5;
-  background-color: $container-color;
+  overflow-x: hidden;
+  //Title margin:
+  margin-top: $mg-1;
+  //Space between sections:
+  margin-bottom: $mg-1;
+  //background-color: $container-color;
+}
+
+.content {
+  display: flex;
 }
 
 .item {
   display: flex;
+  width: 10rem;
   //Spacing between imgs:
-  margin-bottom: $mg-1;
-  margin-right: $mg-1;
+  margin-right: $mg-0-25;
+  transition: all ease 0.2s;
 
   img {
-    width: 80px;
+    width: 100%;
+    transform: scale(0.9);
+
+    &:hover {
+      transform: scale(1);
+      z-index: $z-tooltip;
+    }
   }
 }
