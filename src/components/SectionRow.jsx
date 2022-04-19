@@ -5,9 +5,9 @@ export default function SectionRow({ title, items }) {
     <div className="sectionRow">
       <h2 className="title">{title}</h2>
 
-      <div className="section">
+      <div className="content">
         {/* If there are results (> 0), render: */}
-        <div className="content">
+        <div className="media">
           {items.results.length > 0 &&
             items.results.map((item, key) => (
               <div key={key} className="item">
