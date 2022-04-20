@@ -85,5 +85,23 @@ export default {
         )
       }
     ];
+  },
+
+  getMediaInfo: async (mediaId, type) => {
+    let info = {};
+
+    if (mediaId) {
+      switch (type) {
+        case "movie":
+          info = await APIfetch(`/movie/${mediaId}?api_key=${APIkey}`);
+          break;
+
+        case "tv":
+          info = await APIfetch(`/tv/${mediaId}?api_key=${APIkey}`);
+          break;
+      }
+    }
+
+    return info;
   }
 };
