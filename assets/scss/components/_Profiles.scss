@@ -15,17 +15,17 @@
   &:not(:first-child) {
     margin-left: $mg-2;
   }
-  @media (max-width: 400px) {
+  @media screen and (max-width: 400px) {
     &:nth-child(4) {
       margin-left: 0;
     }
   }
-  @media (max-width: 315px) {
+  @media screen and (max-width: 315px) {
     &:nth-child(4) {
       margin-left: $mg-2;
     }
   }
-  @media (max-width: 283px) {
+  @media screen and (max-width: 283px) {
     &:nth-child(3) {
       margin-left: 0;
     }
