@@ -3,8 +3,12 @@ import React from "react";
 export default function HeroSection({ media }) {
   let mediaBg = `https://image.tmdb.org/t/p/original${media.poster_path}`;
   let mediaYear = new Date(media.first_air_date).getFullYear();
-  //TODO: Get genres names:
   let genres = [];
+
+  for (let i = 0; i < media.genres.length; i++) {
+    genres.push(media.genres[i].name);
+    console.log(media.genres[i]);
+  }
 
   return (
     <section
@@ -30,8 +34,14 @@ export default function HeroSection({ media }) {
 
             <p className="desc">{media.overview}</p>
 
+            <div className="btns">
+              <button class="primaryBtn">Assistir</button>
+              <button class="moreBtn">Mais informações</button>
+            </div>
+
             <p className="genres">
-              <b>Gêneros:</b>
+              <b>Gêneros: </b>
+              {genres.join(", ")}
             </p>
           </div>
         </div>
