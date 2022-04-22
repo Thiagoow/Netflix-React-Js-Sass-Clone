@@ -36,10 +36,10 @@ export default function HeroSection({ media }) {
 
             <div className="btns">
               <a className="primaryBtn" href={`/watch/${media.id}`}>
-                Assistir
+                ▶ Assistir
               </a>
               <a className="moreBtn" href={`/list/add/${media.id}`}>
-                Mais informações
+                + Mais informações
               </a>
             </div>
 
