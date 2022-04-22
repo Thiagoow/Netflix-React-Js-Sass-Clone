@@ -43,10 +43,12 @@ export default function HeroSection({ media }) {
               </a>
             </div>
 
-            <p className="genres">
-              <b>Gêneros: </b>
-              {genres.join(", ")}
-            </p>
+            {genres.length >= 1 && (
+              <p className="genres">
+                <b>Gênero{genres.length !== 1 ? "s" : ""}: </b>
+                {genres.join(", ")}
+              </p>
+            )}
           </div>
         </div>
       </div>
