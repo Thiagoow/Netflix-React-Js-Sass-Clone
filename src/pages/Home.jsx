@@ -14,16 +14,37 @@ const Home = () => {
       setMediaList(list);
     };
 
+    function fetchOnlyFavorites(item) {
+      const favoriteMedias = [61889, 94605, 93405, 114868];
+      let yo = [];
+
+      console.log(item);
+
+      for (let i = 0; i < item[0].items.results.length; i++) {
+        yo.push(item[0].items.results[i].id);
+
+        item = item.filter((i) => {
+          favoriteMedias.includes(yo[i]);
+        });
+      }
+
+      console.log(item);
+
+      //return item;
+    }
+
     const loadHero = async () => {
       let list = await api.getHomeList();
-      let filtered = list.filter((i) => i.slug === "originals");
-      let randomMedia = Math.floor(
+      let filterBySlug = list.filter((i) => i.slug === "originals");
+      let filterMedia = Math.floor(
         //Catches a random array position (-1 because array starts in 0):
-        Math.random() * (filtered[0].items.results.length - 1)
+        Math.random() * (filterBySlug[0].items.results.length - 1)
       );
-      let media = filtered[0].items.results[randomMedia];
 
-      //Catches additional info about the randomMedia:
+      fetchOnlyFavorites(filterBySlug);
+      let media = filterBySlug[0].items.results[filterMedia];
+
+      //Catches additional info about the filterMedia:
       let hero = await api.getMediaInfo(media.id, "tv");
       //console.log(hero);
       setHeroData(hero);
