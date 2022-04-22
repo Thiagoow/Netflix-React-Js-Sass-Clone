@@ -6,8 +6,8 @@ export default function HeroSection({ media }) {
   let genres = [];
 
   for (let i = 0; i < media.genres.length; i++) {
+    //console.log(media.genres[i]);
     genres.push(media.genres[i].name);
-    console.log(media.genres[i]);
   }
 
   return (
@@ -35,8 +35,12 @@ export default function HeroSection({ media }) {
             <p className="desc">{media.overview}</p>
 
             <div className="btns">
-              <button class="primaryBtn">Assistir</button>
-              <button class="moreBtn">Mais informações</button>
+              <a className="primaryBtn" href={`/watch/${media.id}`}>
+                Assistir
+              </a>
+              <a className="moreBtn" href={`/list/add/${media.id}`}>
+                Mais informações
+              </a>
             </div>
 
             <p className="genres">
