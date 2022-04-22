@@ -16,7 +16,7 @@ const Home = () => {
 
     const loadHero = async () => {
       let list = await api.getHomeList();
-      let filtered = list.filter((i) => i.slug === "topRated");
+      let filtered = list.filter((i) => i.slug === "originals");
       let randomMedia = Math.floor(
         //Catches a random array position (-1 because array starts in 0):
         Math.random() * (filtered[0].items.results.length - 1)
