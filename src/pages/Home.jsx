@@ -42,7 +42,6 @@ const Home = () => {
         Math.random() * (filterBySlug[0].items.results.length - 1)
       );
       let media = filterBySlug[0].items.results[filterMedia];
-
       //Catches additional info about the filterMedia:
       let hero = await api.getMediaInfo(media.id, "tv");
 
