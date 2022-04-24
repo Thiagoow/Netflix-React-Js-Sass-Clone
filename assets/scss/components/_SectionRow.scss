@@ -1,11 +1,13 @@
 @use "../abstracts/variables" as *;
 
+/* Not necessary anymore, because container 
+already have this styles:
 .sectionRow {
   .title,
   .content {
     margin-left: $mg-2;
   }
-}
+} */
 
 .content {
   display: flex;

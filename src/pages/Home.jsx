@@ -54,7 +54,7 @@ const Home = () => {
   }, []);
 
   return (
-    <main className="home">
+    <main className="home container">
       {HeroData && <HeroSection media={HeroData} />}
 
       <section className="list">

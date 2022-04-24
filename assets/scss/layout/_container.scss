@@ -1,0 +1,14 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/breakpoints" as *;
+
+.container {
+  margin: 0 0 0 $mg-2;
+  //☝🏽 margin-left: $mg-2;
+
+  @include screen("small", "tiny") {
+    margin: 0 0 0 $mg-1;
+  }
+  @include screen("extraTiny") {
+    margin: 0 0 0 $mg-0-75;
+  }
+}
