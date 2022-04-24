@@ -1,2 +1,7 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/breakpoints" as *;
+
+.header {
+  color: $first-color;
+  text-align: center;
+}
