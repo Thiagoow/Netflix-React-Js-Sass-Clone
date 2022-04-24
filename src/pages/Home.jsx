@@ -2,8 +2,9 @@ import React from "react";
 import api from "../api";
 import HeroSection from "../components/HeroSection";
 import SectionRow from "../components/SectionRow";
+import Header from "../components/Header";
 
-const Home = () => {
+export default function Home() {
   const [mediaList, setMediaList] = React.useState([]);
   const [HeroData, setHeroData] = React.useState(null);
 
@@ -54,16 +55,18 @@ const Home = () => {
   }, []);
 
   return (
-    <main className="home container">
-      {HeroData && <HeroSection media={HeroData} />}
+    <>
+      <Header />
 
-      <section className="list">
-        {mediaList.map((item, key) => (
-          <SectionRow key={key} title={item.title} items={item.items} />
-        ))}
-      </section>
-    </main>
+      <main className="home container">
+        {HeroData && <HeroSection media={HeroData} />}
+
+        <section className="list">
+          {mediaList.map((item, key) => (
+            <SectionRow key={key} title={item.title} items={item.items} />
+          ))}
+        </section>
+      </main>
+    </>
   );
-};
-
-export default Home;
+}

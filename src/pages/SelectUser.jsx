@@ -2,7 +2,7 @@ import React from "react";
 import Profiles from "../components/Profiles";
 import logo from "../../assets/img/logo.svg";
 
-const SelectUser = () => {
+export default function SelectUser() {
   return (
     <main className="main">
       <a href="/" className="logoBtn">
@@ -13,6 +13,4 @@ const SelectUser = () => {
       <Profiles />
     </main>
   );
-};
-
-export default SelectUser;
+}
