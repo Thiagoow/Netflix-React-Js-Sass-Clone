@@ -6,6 +6,10 @@ export default function SectionRow({ title, items }) {
       <h2 className="title">{title}</h2>
 
       <div className="content">
+        <button className="handle" id="leftBtn">
+          <p>‹</p>
+        </button>
+
         {/* If there are results (> 0), render: */}
         <div className="media">
           {items.results.length > 0 &&
@@ -17,6 +21,10 @@ export default function SectionRow({ title, items }) {
               </div>
             ))}
         </div>
+
+        <button className="handle" id="rightBtn">
+          <p>›</p>
+        </button>
       </div>
     </div>
   );
