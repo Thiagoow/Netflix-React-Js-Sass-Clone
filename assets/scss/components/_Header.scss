@@ -2,6 +2,30 @@
 @use "../abstracts/breakpoints" as *;
 
 .header {
-  color: $first-color;
-  text-align: center;
+  width: 100%;
+  position: fixed;
+  z-index: $z-fixed;
+  padding: $mg-0-75 0;
+  display: flex;
+
+  @include screen("small") {
+    padding: $mg-1 0;
+  }
+
+  .logo {
+    max-width: 7rem;
+    margin-left: $mg-1-5;
+    @include screen("medium") {
+      max-width: 6rem;
+    }
+
+    //👇🏽 Same styles as container:
+    @include screen("small", "tiny") {
+      margin-left: $mg-1;
+    }
+    @include screen("extraTiny") {
+      margin-left: $mg-0-75;
+      max-width: 5rem;
+    }
+  }
 }

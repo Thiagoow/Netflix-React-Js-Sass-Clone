@@ -1,0 +1,6 @@
+@use "../abstracts/variables" as *;
+
+//Export the variables to use in Jsx files:
+:export {
+  bodyColor: $body-color;
+}
