@@ -3,7 +3,7 @@
 
 .heroSection {
   width: 100%;
-  height: 85vh;
+  height: 88vh;
 
   background-size: 72%;
   background-position-x: right;
@@ -48,6 +48,11 @@
 }
 
 .info {
+  margin-top: $mg-1-5;
+  @include screen("medium") {
+    margin-top: $mg-1;
+  }
+
   .row {
     display: flex;
     margin-top: $mg-0-5;

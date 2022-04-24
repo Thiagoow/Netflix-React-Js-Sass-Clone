@@ -1,4 +1,5 @@
 import React from "react";
+import users from "./Users";
 import logo from "../../assets/img/logo.svg";
 import sass from "../../assets/scss/base/_export.module.scss";
 
@@ -6,8 +7,8 @@ const Header = () => {
   const [scrollColor, setScrollColor] = React.useState(false);
 
   const changeHeaderColor = () => {
-    //👇🏽 54px = Header height
-    if (window.scrollY >= 54) {
+    //👇🏽 64px = 4 rem -> Header height
+    if (window.scrollY >= 64) {
       setScrollColor(true);
     } else {
       setScrollColor(false);
@@ -26,8 +27,12 @@ const Header = () => {
         background: scrollColor ? sass.bodyColor : "transparent"
       }}
     >
-      <a href="/" className="logoBtn">
+      <a href="/home" className="logoBtn">
         <img src={logo} alt="Netflix Logo" className="logo" />
+      </a>
+
+      <a href="/" className="userImg">
+        <img src={users[0].photo} alt="User image" />
       </a>
     </header>
   );
