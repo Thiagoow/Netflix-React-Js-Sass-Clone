@@ -64,6 +64,14 @@
   .desc {
     margin-top: $mg-0-75;
 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    //☝🏽 Add "..." in the end
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    //☝🏽 Line count
+    -webkit-box-orient: vertical;
+
     @include screen("extraLarge", "large") {
       width: 35rem;
     }
