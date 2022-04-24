@@ -57,6 +57,10 @@
     }
   }
 
+  .points {
+    color: #44dd66;
+  }
+
   .desc {
     margin-top: $mg-0-75;
 
@@ -79,7 +83,7 @@
   gap: $mg-1;
 
   .primaryBtn {
-    border-radius: $border-outside-radius;
+    border-radius: $border-inside-radius;
     background: white;
     color: #000;
     padding: 0.7rem 1.5rem;
@@ -90,7 +94,7 @@
   }
 
   .moreBtn {
-    border-radius: $border-outside-radius;
+    border-radius: $border-inside-radius;
     background: $border-color;
     border: 1px solid $border-color;
     color: white;
