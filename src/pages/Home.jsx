@@ -17,7 +17,7 @@ export default function Home() {
   async function loadFavoriteHero(item) {
     const favoriteMedias = [
       61889, 94605, 93405, 114868, 77169, 66732, 103786, 71912, 890, 67178,
-      112160, 76874, 106292
+      76874, 106292
     ];
     let medias = [];
 
