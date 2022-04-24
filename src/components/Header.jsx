@@ -24,6 +24,7 @@ const Header = () => {
     <header
       className="header"
       style={{
+        transition: "0.35s all ease-in-out",
         background: scrollColor ? sass.bodyColor : "transparent"
       }}
     >
