@@ -2,6 +2,7 @@
 
 /* Not necessary anymore, because container 
 already have this styles:
+
 .sectionRow {
   .title,
   .content {
@@ -44,22 +45,22 @@ already have this styles:
 }
 
 .handle {
-  position: absolute;
-  height: 15rem;
-  margin-top: 1rem;
-  margin-left: $mg-1;
-
-  background: $container-color;
-  z-index: $z-tooltip;
-  width: $mg-2;
-  cursor: pointer;
-
-  font-size: 3.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
   line-height: 0;
+
+  position: absolute;
+  width: $mg-2;
+  height: 15rem;
+  margin: $mg-1 0 0 $mg-1;
+
+  background: rgb($container-color, 0.8);
+  z-index: $z-tooltip;
+  cursor: pointer;
+
+  font-size: 3.5rem;
+  color: $title-color;
   transition: background-color 150ms ease-in-out;
 
   &:hover {
