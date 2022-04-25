@@ -1,9 +1,16 @@
 const BaseUrl = "https://api.themoviedb.org/3";
 const APIkey = "a936a97a7b6448430a09401f17ec508f";
 
-const APIfetch = async (endpoint) => {
+const APIfetch = async (endpoint, lang) => {
+  let translate = "";
+  if (!lang) {
+    /*☝🏽 Se existir um 2º argumento, traduz. 
+    Do contrário, não traduz: */
+    translate = "&language=pt-br&region=br";
+  }
+
   try {
-    const res = await fetch(`${BaseUrl}${endpoint}&language=pt-br&region=br`);
+    const res = await fetch(`${BaseUrl}${endpoint}${translate}`);
     const json = await res.json();
 
     return json;
@@ -103,5 +110,17 @@ export default {
     }
 
     return info;
+  },
+
+  getVideos: async (mediaId) => {
+    let videos = {};
+
+    if (mediaId) {
+      videos = await APIfetch(
+        `movie/${mediaId}/videos?api_key=${APIkey}`,
+        true //👈🏽 Não traduz essa rota
+      );
+    }
+    return videos;
   }
 };
