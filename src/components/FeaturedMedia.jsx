@@ -3,8 +3,8 @@ import api from "../api";
 
 const FeaturedMedia = ({ media }) => {
   async function loadVideos() {
-    let videos = await api.getVideos(media.id);
-    console.log(videos);
+    let mediaVid = await api.getVideos(media.id);
+    console.log(mediaVid);
   }
 
   React.useEffect(() => {

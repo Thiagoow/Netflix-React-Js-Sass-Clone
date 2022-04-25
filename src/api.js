@@ -117,7 +117,7 @@ export default {
 
     if (mediaId) {
       videos = await APIfetch(
-        `movie/${mediaId}/videos?api_key=${APIkey}`,
+        `/movie/${mediaId}/videos?api_key=${APIkey}`,
         true //👈🏽 Não traduz essa rota
       );
     }
