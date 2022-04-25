@@ -31,6 +31,16 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.info {
+  margin-top: $mg-1-5;
+  @include screen("medium") {
+    margin-top: $mg-1;
+  }
+  @include screen("small") {
+    margin-top: $mg-1-5;
+  }
 
   .title {
     font-size: $biggest-font-size;
@@ -45,13 +55,6 @@
       width: 20rem;
     }
   }
-}
-
-.info {
-  margin-top: $mg-1-5;
-  @include screen("medium") {
-    margin-top: $mg-1;
-  }
 
   .row {
     display: flex;
@@ -61,31 +64,39 @@
       margin-right: $mg-1;
     }
   }
-
   .points {
     color: #44dd66;
   }
 
-  .desc {
-    margin-top: $mg-0-75;
+  .genres {
+    @include screen("small") {
+      font-size: $small-font-size;
+    }
+  }
+}
 
-    overflow: hidden;
-    text-overflow: ellipsis;
-    //☝🏽 Add "..." in the end
-    display: -webkit-box;
-    -webkit-line-clamp: 5;
-    //☝🏽 Line count
-    -webkit-box-orient: vertical;
+.desc {
+  margin-top: $mg-0-75;
 
-    @include screen("extraLarge", "large") {
-      width: 35rem;
-    }
-    @include screen("medium", "small") {
-      width: 23rem;
-    }
-    @include screen("tiny") {
-      width: 18rem;
-    }
+  overflow: hidden;
+  text-overflow: ellipsis;
+  //☝🏽 Add "..." in the end
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  //☝🏽 Line count
+  -webkit-box-orient: vertical;
+
+  @include screen("extraLarge", "large") {
+    width: 35rem;
+  }
+  @include screen("medium", "small") {
+    width: 23rem;
+  }
+  @include screen("small") {
+    font-size: $smaller-font-size;
+  }
+  @include screen("tiny") {
+    width: 18rem;
   }
 }
 
@@ -93,7 +104,12 @@
   margin: $mg-1 0;
   font-weight: $wgt-semi-bold;
   display: flex;
+  flex-wrap: wrap;
   gap: $mg-1;
+
+  @include screen("small") {
+    font-size: 0.95rem;
+  }
 
   .primaryBtn {
     border-radius: $border-inside-radius;
