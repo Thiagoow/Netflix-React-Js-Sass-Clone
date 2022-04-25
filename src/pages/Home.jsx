@@ -3,10 +3,12 @@ import api from "../api";
 import HeroSection from "../components/HeroSection";
 import SectionRow from "../components/SectionRow";
 import Header from "../components/Header";
+import FeaturedMedia from "../components/FeaturedMedia";
 
 export default function Home() {
   const [mediaList, setMediaList] = React.useState([]);
   const [HeroData, setHeroData] = React.useState(null);
+  const [FeaturedData, setFeaturedData] = React.useState(null);
 
   async function loadSections() {
     let list = await api.getHomeList();
@@ -14,7 +16,10 @@ export default function Home() {
     setMediaList(list);
   }
 
-  async function loadFavoriteHero(item) {
+  async function loadHero() {
+    let list = await api.getHomeList();
+    setMediaList(list);
+
     const favoriteMedias = [
       61889, 94605, 93405, 114868, 77169, 66732, 103786, 71912, 890, 67178,
       76874, 106292
@@ -22,37 +27,37 @@ export default function Home() {
     let medias = [];
 
     for (let i = 0; i < favoriteMedias.length; i++) {
-      item = await api.getMediaInfo(favoriteMedias[i], "tv");
-      medias.push(item);
+      list = await api.getMediaInfo(favoriteMedias[i], "tv");
+      medias.push(list);
     }
     let randomMedia = Math.floor(Math.random() * (medias.length - 1));
 
-    item = medias[randomMedia];
-    //console.log(item);
-    return item;
+    list = medias[randomMedia];
+    //console.log(list);
+    setHeroData(list);
   }
-  async function loadHero() {
+
+  async function loadFeatured() {
     let list = await api.getHomeList();
-    let filterBySlug = list.filter((i) => i.slug === "topRated");
-    /*
+    let filterBySlug = list.filter((i) => i.slug === "history");
+    /* */
     let filterMedia = Math.floor(
       //Catches a random array position (-1 because array starts in 0):
       Math.random() * (filterBySlug[0].items.results.length - 1)
     );
     let media = filterBySlug[0].items.results[filterMedia];
     //Catches additional info about the filterMedia:
-    let hero = await api.getMediaInfo(media.id, "tv"); */
+    let featured = await api.getMediaInfo(media.id, "movie");
 
-    /*Fetching only favoriteMedias: */
-    let hero = await loadFavoriteHero(filterBySlug);
-    //console.log(hero);
-    setHeroData(hero);
+    //console.log(featured);
+    setFeaturedData(featured);
   }
 
   //==== Executa as funções:
   React.useEffect(() => {
-    loadSections();
     loadHero();
+    loadSections();
+    loadFeatured();
   }, []);
 
   return (
@@ -68,6 +73,8 @@ export default function Home() {
           ))}
         </section>
       </main>
+
+      {FeaturedData && <FeaturedMedia media={FeaturedData} />}
     </>
   );
 }

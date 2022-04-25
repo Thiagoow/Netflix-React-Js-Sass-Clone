@@ -1,0 +1,61 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/breakpoints" as *;
+
+.featuredMedia {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  height: 22rem;
+
+  .img {
+    max-width: 10rem;
+    max-height: 10rem;
+    background-repeat: no-repeat;
+
+    margin-left: $mg-2;
+    margin-bottom: 5rem;
+  }
+}
+
+.details {
+  display: block;
+
+  margin-left: $mg-2;
+
+  .title {
+    font-size: $h2-font-size;
+    width: 80%;
+  }
+
+  .desc {
+    font-size: $smaller-font-size;
+    width: 60%;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+}
+
+.secondaryBtns {
+  margin: $mg-1 0;
+  font-weight: $wgt-semi-bold;
+  font-size: $smaller-font-size;
+  display: flex;
+  gap: $mg-1-5;
+
+  .playBtn,
+  .moreBtn {
+    border-radius: $border-inside-radius;
+    background: $border-color;
+    border: 1px solid $border-color;
+    color: white;
+    padding: 0.6rem 0.7rem;
+
+    &:hover {
+      background: transparent;
+    }
+  }
+}
