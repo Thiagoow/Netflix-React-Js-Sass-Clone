@@ -62,8 +62,8 @@
   }
 
   .title {
-    font-size: $h2-font-size;
     width: 50%;
+    font-size: calc($h2-font-size + 0.2rem);
 
     @include screen("medium") {
       width: 100%;
@@ -88,7 +88,7 @@
     padding: 0.6rem 0.7rem;
 
     &:hover {
-      background: transparent;
+      background: $body-color;
     }
   }
 }
