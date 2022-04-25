@@ -2,40 +2,73 @@
 @use "../abstracts/breakpoints" as *;
 
 .featuredMedia {
-  display: flex;
-  justify-items: center;
-  align-items: center;
+  width: 100%;
   height: 22rem;
 
-  .img {
-    max-width: 10rem;
-    max-height: 10rem;
-    background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: $container-color;
+  background-position-x: center;
+  background-position-y: -20rem;
+  background-repeat: no-repeat;
 
-    margin-left: $mg-2;
-    margin-bottom: 5rem;
+  @include screen("medium") {
+    height: 30rem;
+    flex-direction: column;
+
+    background-size: 100%;
+    background-position-x: center;
+    background-position-y: -6rem;
+    background-repeat: no-repeat;
+  }
+}
+
+.darkGradient {
+  width: inherit;
+  height: inherit;
+  background: linear-gradient(to left, #111 15%, transparent 75%);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  @include screen("medium") {
+    flex-direction: column;
+    background: linear-gradient(to top, #111 20%, transparent 80%);
+  }
+
+  .video iframe {
+    width: 32rem;
+    height: 16rem;
+    margin-left: 2rem;
+
+    @include screen("medium") {
+      width: 22rem;
+      height: 12rem;
+      margin: 0 0 0 0;
+    }
   }
 }
 
 .details {
-  display: block;
-
+  display: flex;
+  flex-direction: column;
   margin-left: $mg-2;
+
+  @include screen("medium") {
+    justify-items: center;
+    align-items: center;
+    margin: $mg-0-5 0 0 0;
+  }
 
   .title {
     font-size: $h2-font-size;
-    width: 80%;
-  }
+    width: 50%;
 
-  .desc {
-    font-size: $smaller-font-size;
-    width: 60%;
-
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
+    @include screen("medium") {
+      width: 100%;
+      text-align: center;
+    }
   }
 }
 
@@ -58,4 +91,26 @@
       background: transparent;
     }
   }
+}
+
+.description {
+  font-size: $smaller-font-size;
+
+  @include screen("extraLarge", "large") {
+    width: 45%;
+  }
+  @include screen("medium") {
+    width: 60%;
+    text-align: center;
+    margin-top: $mg-0-5;
+  }
+  @include screen("small") {
+    width: 80%;
+  }
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
 }
