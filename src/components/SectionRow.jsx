@@ -3,7 +3,7 @@ import React from "react";
 export default function SectionRow({ title, items }) {
   return (
     <div className="sectionRow">
-      <h2 className="title">{title}</h2>
+      <h2 className="sectionTitle">{title}</h2>
 
       <button className="handle" id="leftBtn">
         <p>‹</p>

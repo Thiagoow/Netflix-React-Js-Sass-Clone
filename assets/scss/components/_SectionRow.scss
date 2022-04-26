@@ -1,22 +1,12 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/breakpoints" as *;
 
-/* Not necessary anymore, because container 
-already have this styles:
-
-.sectionRow {
-  .title,
-  .content {
-    margin-left: $mg-2;
-  }
-} */
-
-.title {
+.sectionTitle {
   font-size: $h2-font-size;
   margin-bottom: $mg-1;
 
   @include screen("small") {
-    font-size: calc($h3-font-size + 0.2rem);
+    font-size: $h3-font-size;
     margin-bottom: $mg-0-5;
   }
 }
