@@ -15,12 +15,23 @@
     background-size: cover;
     background-position: right center;
   }
+  @include screen("small") {
+    background-size: 100%;
+    background-position: center -6rem;
+  }
 }
 
 .rightGradient {
   width: inherit;
   height: inherit;
   background: linear-gradient(to right, #111 30%, transparent 70%);
+
+  @include screen("small") {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: linear-gradient(to top, #111 20%, transparent 80%);
+  }
 }
 
 .mediaContent {
@@ -39,7 +50,7 @@
     margin-top: $mg-1;
   }
   @include screen("small") {
-    margin-top: $mg-1-5;
+    margin-top: 8rem;
   }
 
   .title {
@@ -54,23 +65,33 @@
     @include screen("small") {
       width: 20rem;
     }
+    @include screen("tiny") {
+      font-size: $h1-font-size;
+    }
   }
 
   .row {
     display: flex;
     margin-top: $mg-0-5;
+
     //👇🏽 Apply this style to all children:
     & > * {
       margin-right: $mg-1;
+
+      @include screen("extraTiny") {
+        font-size: $small-font-size;
+        margin-right: $mg-0-75;
+      }
     }
   }
+
   .points {
     color: #44dd66;
   }
 
   .genres {
     @include screen("small") {
-      font-size: $small-font-size;
+      font-size: $tiny-font-size;
     }
   }
 }
@@ -93,7 +114,7 @@
     width: 23rem;
   }
   @include screen("small") {
-    font-size: $smaller-font-size;
+    font-size: $small-font-size;
   }
   @include screen("tiny") {
     width: 18rem;
@@ -109,6 +130,9 @@
 
   @include screen("small") {
     font-size: 0.95rem;
+  }
+  @include screen("tiny") {
+    font-size: $small-font-size;
   }
 
   .primaryBtn {
