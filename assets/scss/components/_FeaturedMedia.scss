@@ -75,7 +75,7 @@
 .secondaryBtns {
   margin: $mg-1 0;
   font-weight: $wgt-semi-bold;
-  font-size: $smaller-font-size;
+  font-size: $tiny-font-size;
   display: flex;
   gap: $mg-1-5;
 
@@ -94,7 +94,7 @@
 }
 
 .description {
-  font-size: $smaller-font-size;
+  font-size: $tiny-font-size;
 
   @include screen("extraLarge", "large") {
     width: 45%;
