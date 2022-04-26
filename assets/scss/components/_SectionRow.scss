@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/breakpoints" as *;
 
 /* Not necessary anymore, because container 
 already have this styles:
@@ -10,11 +11,19 @@ already have this styles:
   }
 } */
 
+.title {
+  font-size: $h2-font-size;
+  margin-bottom: $mg-1;
+
+  @include screen("small") {
+    font-size: calc($h3-font-size + 0.2rem);
+    margin-bottom: $mg-0-5;
+  }
+}
+
 .content {
   display: flex;
   overflow-x: hidden;
-  //Title margin:
-  margin-top: $mg-1;
   //Space between sections:
   margin-bottom: $mg-1-5;
   //Space between handle:
