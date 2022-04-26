@@ -52,7 +52,7 @@
   position: absolute;
   width: $mg-2;
   height: 15rem;
-  margin: $mg-1 0 0 $mg-1;
+  margin: 0 0;
 
   background: rgb($container-color, 0.8);
   z-index: $z-tooltip;
@@ -73,8 +73,14 @@
 #rightBtn {
   right: 0;
   padding-left: $mg-0-25;
+  @include screen("small") {
+    padding-left: 0;
+  }
 }
 #leftBtn {
   left: 0;
   padding-right: $mg-0-25;
+  @include screen("small") {
+    padding-right: 0;
+  }
 }
