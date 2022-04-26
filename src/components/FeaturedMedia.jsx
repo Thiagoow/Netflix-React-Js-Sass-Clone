@@ -2,20 +2,21 @@ import React from "react";
 import api from "../api";
 
 const FeaturedMedia = ({ media }) => {
-  let videoPath = "";
+  const [VideoPath, setVideoPath] = React.useState(null);
   let mediaBg = `https://image.tmdb.org/t/p/original${media.poster_path}`;
 
   async function loadVideos() {
     let mediaVid = await api.getVideos(media.id);
-
-    /* TODO: Get only trailers:
-    mediaVid = mediaVid.results[i].filter((index) => {
-      index.type === "Trailer";
-    }); */
     //console.log(mediaVid);
 
-    videoPath = mediaVid.results[0].key;
-    console.log(videoPath);
+    /* TODO: Get only trailers:*/
+    let trailers = mediaVid.results.filter((i) => {
+      i.type === "Trailer";
+    });
+
+    let path = mediaVid.results[0].key;
+    //console.log(path);
+    setVideoPath(path);
   }
 
   React.useEffect(() => {
@@ -31,11 +32,10 @@ const FeaturedMedia = ({ media }) => {
     >
       <div className="darkGradient">
         <div className="video ">
-          {/* TODO: Make iframe load the video: */}
           <iframe
             width="0"
             height="0"
-            src={`https://www.youtube.com/embed/${videoPath}`}
+            src={`https://www.youtube.com/embed/${VideoPath}`}
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -47,11 +47,11 @@ const FeaturedMedia = ({ media }) => {
           <h2 className="title">{media.title}</h2>
 
           <div className="secondaryBtns">
-            <a className="playBtn" href={`/watch/${media.id}`}>
-              ▶ Assistir
-            </a>
             <a className="moreBtn" href={`/list/add/${media.id}`}>
               + Mais informações
+            </a>
+            <a className="playBtn" href={`/watch/${media.id}`}>
+              ▶ Assistir
             </a>
           </div>
 
