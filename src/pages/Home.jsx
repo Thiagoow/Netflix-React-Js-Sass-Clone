@@ -6,6 +6,7 @@ import Header from "../components/Header";
 import FeaturedMedia from "../components/FeaturedMedia";
 
 export default function Home() {
+  //TODO: Split this sectionsArray in two 👇🏽:
   const [mediaList, setMediaList] = React.useState([]);
   const [HeroData, setHeroData] = React.useState(null);
   const [FeaturedData, setFeaturedData] = React.useState(null);

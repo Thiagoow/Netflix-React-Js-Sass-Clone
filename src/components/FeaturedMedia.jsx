@@ -31,6 +31,7 @@ const FeaturedMedia = ({ media }) => {
     >
       <div className="darkGradient">
         <div className="video ">
+          {/* TODO: Make iframe load the video: */}
           <iframe
             width="0"
             height="0"
