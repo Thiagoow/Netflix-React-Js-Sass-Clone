@@ -48,6 +48,10 @@
       height: 12rem;
       margin: 0 0 0 0;
     }
+    @media screen and (max-width: 379px) {
+      width: 18rem;
+      height: 11rem;
+    }
   }
 }
 
