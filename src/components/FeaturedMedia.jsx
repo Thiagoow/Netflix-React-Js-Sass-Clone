@@ -47,10 +47,14 @@ const FeaturedMedia = ({ media }) => {
           <h2 className="title">{media.title}</h2>
 
           <div className="secondaryBtns">
-            <a className="moreBtn" href={`/list/add/${media.id}`}>
+            <a
+              className="moreBtn"
+              href={`/list/add/${media.id}`}
+              target="_blank"
+            >
               + Mais informações
             </a>
-            <a className="playBtn" href={`/watch/${media.id}`}>
+            <a className="playBtn" href={media.homepage} target="_blank">
               ▶ Assistir
             </a>
           </div>
