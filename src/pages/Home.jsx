@@ -6,15 +6,30 @@ import Header from "../components/Header";
 import FeaturedMedia from "../components/FeaturedMedia";
 
 export default function Home() {
-  //TODO: Split this sectionsArray in two 👇🏽:
   const [mediaList, setMediaList] = React.useState([]);
+  const [FirstHalf, setFirstHalf] = React.useState([]);
+  const [SecondHalf, setSecondHalf] = React.useState([]);
+
   const [HeroData, setHeroData] = React.useState(null);
   const [FeaturedData, setFeaturedData] = React.useState(null);
 
   async function loadSections() {
     let list = await api.getHomeList();
-    //console.log(list);
-    setMediaList(list);
+
+    /*======Split mediaList array in 2 👇🏽:
+    To split list in 3 arrays, simply remove
+    ".slice()" BEFORE the ".splice()" method. */
+    const middleIndex = Math.ceil(list.length / 2);
+    //const threePartIndex = Math.ceil(list.length / 3);
+
+    const firstHalf = list.slice().splice(0, middleIndex);
+    const secondHalf = list.slice().splice(-middleIndex);
+    //const thirdPart = list;
+
+    //console.log([firstHalf, secondHalf]);
+    setFirstHalf(firstHalf);
+    setSecondHalf(secondHalf);
+    //setThirdPart(thirdPart);
   }
 
   async function loadHero() {
@@ -40,7 +55,7 @@ export default function Home() {
 
   async function loadFeatured() {
     let list = await api.getHomeList();
-    let filterBySlug = list.filter((i) => i.slug === "history");
+    let filterBySlug = list.filter((i) => i.slug === "animations");
     /* */
     let filterMedia = Math.floor(
       //Catches a random array position (-1 because array starts in 0):
@@ -65,17 +80,23 @@ export default function Home() {
     <>
       <Header />
 
-      <main className="home container">
+      <main className="home">
         {HeroData && <HeroSection media={HeroData} />}
 
         <section className="list">
-          {mediaList.map((item, key) => (
+          {FirstHalf.map((item, key) => (
+            <SectionRow key={key} title={item.title} items={item.items} />
+          ))}
+        </section>
+
+        {FeaturedData && <FeaturedMedia media={FeaturedData} />}
+
+        <section className="list">
+          {SecondHalf.map((item, key) => (
             <SectionRow key={key} title={item.title} items={item.items} />
           ))}
         </section>
       </main>
-
-      {FeaturedData && <FeaturedMedia media={FeaturedData} />}
     </>
   );
 }

@@ -17,9 +17,9 @@ export default function HeroSection({ media }) {
         backgroundImage: `url(${mediaBg})`
       }}
     >
-      <div className="rightGradient">
+      <div className="rightGradient ">
         <div className="mediaContent">
-          <div className="info">
+          <div className="info container">
             <h1 className="title">{media.name}</h1>
 
             <b className="row">

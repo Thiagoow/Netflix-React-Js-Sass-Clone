@@ -3,7 +3,8 @@
 
 .featuredMedia {
   width: 100%;
-  height: 22rem;
+  height: 28rem;
+  margin: 4rem 0;
 
   background-size: 100%;
   background-color: $container-color;
@@ -25,7 +26,7 @@
 .darkGradient {
   width: inherit;
   height: inherit;
-  background: linear-gradient(to left, #111 15%, transparent 75%);
+  background: linear-gradient(to left, #111 10%, transparent 80%);
 
   display: flex;
   flex-direction: row;

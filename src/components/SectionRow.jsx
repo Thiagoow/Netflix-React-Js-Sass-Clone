@@ -2,7 +2,7 @@ import React from "react";
 
 export default function SectionRow({ title, items }) {
   return (
-    <div className="sectionRow">
+    <div className="sectionRow container">
       <h2 className="sectionTitle">{title}</h2>
 
       <button className="handle" id="leftBtn">
@@ -13,7 +13,7 @@ export default function SectionRow({ title, items }) {
         <p>›</p>
       </button>
 
-      <div className="content">
+      <div className="content notContainer">
         {/* If there are results (> 0), render: */}
         <div className="media">
           {items.results.length > 0 &&
