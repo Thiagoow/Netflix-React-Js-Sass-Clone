@@ -59,6 +59,7 @@
   display: flex;
   flex-direction: column;
   margin-left: $mg-2;
+  width: 41%;
 
   @include screen("medium") {
     justify-items: center;
@@ -67,11 +68,14 @@
   }
 
   .title {
-    width: 50%;
+    width: 72%;
     font-size: calc($h2-font-size + 0.2rem);
 
+    @include screen("large") {
+      width: 68%;
+    }
     @include screen("medium") {
-      width: 100%;
+      width: 60vw;
       text-align: center;
     }
   }
@@ -83,6 +87,11 @@
   font-size: $tiny-font-size;
   display: flex;
   gap: $mg-1-5;
+
+  @media screen and(max-width: 631px) {
+    width: 80vw;
+    justify-content: center;
+  }
 
   .playBtn,
   .moreBtn {
@@ -100,17 +109,15 @@
 
 .description {
   font-size: $tiny-font-size;
+  width: 68%;
 
-  @include screen("extraLarge", "large") {
-    width: 45%;
-  }
   @include screen("medium") {
-    width: 60%;
+    width: 60vw;
     text-align: center;
     margin-top: $mg-0-5;
   }
   @include screen("small") {
-    width: 80%;
+    width: 80vw;
   }
 
   overflow: hidden;
