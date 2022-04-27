@@ -15,10 +15,17 @@
   display: flex;
   overflow-x: hidden;
   //Space between sections:
-  margin-bottom: $mg-2 !important;
+  margin-bottom: $mg-2;
   //Space between handle:
-  margin-left: $mg-1;
+  margin-left: 0;
   background-color: $container-color;
+
+  @include screen("small") {
+    margin-left: $mg-1;
+  }
+  @include screen("extraTiny") {
+    margin-left: $mg-1-5;
+  }
 }
 
 .media {
