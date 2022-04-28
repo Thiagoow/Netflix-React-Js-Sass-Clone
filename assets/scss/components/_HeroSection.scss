@@ -56,7 +56,7 @@
 .info {
   margin-top: $mg-1-5;
   @include screen("medium") {
-    margin-top: $mg-1;
+    margin-top: $mg-2;
   }
   @include screen("small") {
     margin-top: 8rem;
