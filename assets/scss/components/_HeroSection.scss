@@ -30,6 +30,9 @@
     display: flex;
     justify-content: center;
     align-content: center;
+    background: linear-gradient(to top, $body-color 20%, transparent 80%);
+  }
+  @media screen and (max-width: 380px) {
     background: linear-gradient(to top, $body-color 40%, transparent 60%);
   }
 }
