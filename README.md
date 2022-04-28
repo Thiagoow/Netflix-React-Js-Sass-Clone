@@ -1,6 +1,6 @@
 <!---->
 <div align="center">
-<img src="./ReadMeFiles/app.jpg" align="center">
+<img src="./public/app.jpg" align="center">
 </div>
 
 # Netflix Clone React.js & Sass + TheMovieDbAPI 🎞️🍿
