@@ -24,20 +24,20 @@
 .rightGradient {
   width: inherit;
   height: inherit;
-  background: linear-gradient(to right, #111 30%, transparent 70%);
+  background: linear-gradient(to right, $body-color 30%, transparent 70%);
 
   @include screen("small") {
     display: flex;
     justify-content: center;
     align-content: center;
-    background: linear-gradient(to top, #111 20%, transparent 80%);
+    background: linear-gradient(to top, $body-color 20%, transparent 80%);
   }
 }
 
 .mediaContent {
   width: inherit;
   height: inherit;
-  background: linear-gradient(to top, #111 10%, transparent 90%);
+  background: linear-gradient(to top, $body-color 10%, transparent 90%);
 
   display: flex;
   flex-direction: column;
