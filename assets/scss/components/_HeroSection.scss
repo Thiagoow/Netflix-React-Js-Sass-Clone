@@ -24,7 +24,13 @@
 .rightGradient {
   width: inherit;
   height: inherit;
-  background: linear-gradient(to right, $body-color 30%, transparent 70%);
+  background: linear-gradient(to right, $body-color 26%, transparent 74%);
+  @include screen("large") {
+    background: linear-gradient(to right, $body-color 28%, transparent 72%);
+  }
+  @media screen and (max-width: 992px) {
+    background: linear-gradient(to right, $body-color 10%, transparent 90%);
+  }
 
   @include screen("small") {
     display: flex;
@@ -32,7 +38,7 @@
     align-content: center;
     background: linear-gradient(to top, $body-color 20%, transparent 80%);
   }
-  @media screen and (max-width: 380px) {
+  @media screen and (max-width: 414px) {
     background: linear-gradient(to top, $body-color 40%, transparent 60%);
   }
 }
