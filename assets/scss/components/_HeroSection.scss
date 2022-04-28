@@ -10,12 +10,17 @@
   background-position-y: -28rem;
   background-repeat: no-repeat;
 
+  @include screen("extraLarge", "large") {
+    margin-bottom: -($mg-0-5);
+  }
   @include screen("medium") {
     width: 100%;
+    margin-bottom: $mg-0-75;
     background-size: cover;
     background-position: right center;
   }
   @include screen("small") {
+    margin-bottom: 0;
     background-size: 100%;
     background-position: center -6rem;
   }
