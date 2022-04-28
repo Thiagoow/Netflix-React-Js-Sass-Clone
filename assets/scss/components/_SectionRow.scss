@@ -35,9 +35,13 @@
 .item {
   display: flex;
   width: 10rem;
+  transition: all ease 0.2s;
   //Spacing between imgs:
   margin-right: $mg-0-25;
-  transition: all ease 0.2s;
+
+  &:last-child {
+    margin-right: 0;
+  }
 
   img {
     width: 100%;
