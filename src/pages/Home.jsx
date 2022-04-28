@@ -38,7 +38,7 @@ export default function Home() {
 
     const favoriteMedias = [
       61889, 94605, 93405, 114868, 77169, 66732, 103786, 71912, 890, 67178,
-      76874, 106292, 100757, 85937, 70785, 75450
+      76874, 106292, 100757, 85937, 75450
     ];
     let medias = [];
 
@@ -46,7 +46,8 @@ export default function Home() {
       list = await api.getMediaInfo(favoriteMedias[i], "tv");
       medias.push(list);
     }
-    let randomMedia = Math.floor(Math.random() * (medias.length - 1));
+    //~~ -> Does the same thing "as Math.floor()", but faster:
+    let randomMedia = [~~(Math.random() * medias.length)];
 
     list = medias[randomMedia];
     //console.log(list);
@@ -56,10 +57,10 @@ export default function Home() {
   async function loadFeatured() {
     let list = await api.getHomeList();
     let filterBySlug = list.filter((i) => i.slug === "animations");
-    /* */
-    let filterMedia = Math.floor(
+    //👇🏼 ~~ -> Does the same thing "as Math.floor()", but faster:
+    let filterMedia = ~~(
       //Catches a random array position (-1 because array starts in 0):
-      Math.random() * (filterBySlug[0].items.results.length - 1)
+      (Math.random() * (filterBySlug[0].items.results.length - 1))
     );
     let media = filterBySlug[0].items.results[filterMedia];
     //Catches additional info about the filterMedia:
