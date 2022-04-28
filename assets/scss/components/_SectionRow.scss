@@ -18,7 +18,7 @@
   margin-bottom: $mg-2;
   //Space between handle:
   margin-left: 0;
-  background-color: $container-color;
+  background-color: $body-color;
 
   @include screen("small") {
     margin-left: $mg-1;
