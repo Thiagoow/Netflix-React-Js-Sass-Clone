@@ -10,4 +10,4 @@ tendo como base o <a href="https://www.youtube.com/watch?v=tBweoUiMsDg" target="
 do canal do Youtube: <a href="https://www.youtube.com/channel/UCw9mYSlqKRXI6l4vH-tAYpQ" target="_blank">
 Bonieky Lacerda</a></p>
 
-## Demo: https://netflix-sass.netlify.app
+## Demo: https://netflix-sass.vercel.app
