@@ -4,8 +4,8 @@ const APIkey = "a936a97a7b6448430a09401f17ec508f";
 const APIfetch = async (endpoint, lang) => {
   let translate = "";
   if (!lang) {
-    /*☝🏽 Se existir um 2º argumento, traduz. 
-    Do contrário, não traduz: */
+    /*☝🏽 Se existir um 2º argumento, não traduz. 
+    Do contrário, traduz os itens: */
     translate = "&language=pt-br&region=br";
   }
 
