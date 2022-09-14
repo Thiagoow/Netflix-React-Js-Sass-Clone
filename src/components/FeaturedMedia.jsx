@@ -1,5 +1,5 @@
 import React from "react";
-import api from "../api";
+import api from "../utils/api";
 
 const FeaturedMedia = ({ media }) => {
   const [VideoPath, setVideoPath] = React.useState(null);

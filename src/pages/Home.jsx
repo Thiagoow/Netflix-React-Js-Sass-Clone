@@ -1,5 +1,5 @@
 import React from "react";
-import api from "../api";
+import api from "../utils/api";
 import HeroSection from "../components/HeroSection";
 import SectionRow from "../components/SectionRow";
 import Header from "../components/Header";
