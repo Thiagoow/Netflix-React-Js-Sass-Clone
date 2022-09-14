@@ -1,6 +1,5 @@
 import React from "react";
-//Components:
-import users from "./Users";
+import users from "../utils/users";
 
 const Profiles = () => {
   return (

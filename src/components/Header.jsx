@@ -1,5 +1,5 @@
 import React from "react";
-import users from "./Users";
+import users from "../utils/users";
 import logo from "../../assets/img/logo.svg";
 import sass from "../../assets/scss/base/_export.module.scss";
 
